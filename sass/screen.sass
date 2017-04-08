@@ -1,1 +1,127 @@
 @import "compass/reset"
+$font-family: Microsoft JhengHei,monospace
+$font-size-1: 20px
+$border-type: 0.5px solid #EDECEB
+$bg-color: #FFFEFD
+$orange: #FF9826
+
+header
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%
+	height: 80px
+	background-color: black
+	color: white
+	display: inline-block
+	z-index: 99
+	.orange
+		position: relative
+		width: 30px
+		height: 100%
+		top: 0px
+		left: 0px
+		background-color: $orange
+		float: left
+	.logo
+		position: relative
+		left: 20px
+		top: 10px
+		float: left
+		border: $border-type
+		img
+			width: 170px
+			height: 60px
+	nav
+		position: absolute
+		width: 328px
+		height: 40px
+		margin-left: -164px
+		top: 40px
+		left: 50%
+		border: $border-type
+		div
+			position: relative
+			height: 38px
+			float: left
+			width: (320px)/4
+			font-size: 33px
+			font-family: $font-family
+			margin-left: 2px
+			text-align: center
+			cursor: pointer
+			a
+				color: white
+		div:hover
+			border-bottom: 3px solid $orange
+div.mainPage
+	position: relative
+	width: 100%
+	height: auto
+	left: 0px
+	top: 0px
+	.postBoard
+		position: absolute
+		top: 137px
+		width: 82%
+		left: (100% - 82%)/2
+		border: $border-type
+		.posts
+			position: relative
+			float: left
+			width: (100%/5)
+			height: 266px
+			border: $border-type
+			margin-left: 2%
+			margin-right: 2%
+			margin-bottom: 30px
+			cursor: pointer
+			&:hover
+				-webkit-filter: brightness(90%)
+				filter: brightness(90%)
+			.foodPicture
+				position:relative
+				float: left
+				width: 100%
+				height: 190px
+			.info
+				position: relative
+				float: left
+				width: 100%
+				height: 266px - 190px
+				padding-left: 10px
+				padding-right: 10px
+				>div
+					position: relative
+					float: left
+					width: 100%
+					font-family: $font-family
+				.up
+					height: 30px
+					a
+						line-height: 25px
+						font-weight: bold
+				.middle
+					height: 27px
+					a
+						font-weight: bold
+				.bottom
+					height: 19px
+					a
+						color: #BAB7B5
+					.moreInfo
+						position: absolute
+						right: 0px
+						top: 0px
+						width: 60px
+						height: auto
+						div
+							position: relative
+							display: inline-block
+							width: 8px
+							height: 8px
+							border-radius: 50%
+							background-color: #8C8B8B
+
+
+
