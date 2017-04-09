@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>share your food</title>
 	<link rel="stylesheet" href="./css/screen.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
+
 </head>
 <body>
 	<header>
@@ -29,12 +33,13 @@
 				<div class="info">
 					<div class="up">
 						<a>$100/人</a>
+						<div class="star"></div>
 					</div>
 					<div class="middle">
 						<a>黯然消魂飯</a>
 					</div>
 					<div class="bottom">
-						<a class="comment">comment</a>
+						<a class="comment">10 comments</a>
 						<div class="moreInfo">
 							<div></div>
 							<div></div>
@@ -48,12 +53,13 @@
 				<div class="info">
 					<div class="up">
 						<a>$100/人</a>
+						<div class="star"></div>
 					</div>
 					<div class="middle">
 						<a>湖南味紅蟳油飯</a>
 					</div>
 					<div class="bottom">
-						<a class="comment">comment</a>
+						<a class="comment">8 comments</a>
 						<div class="moreInfo">
 							<div></div>
 							<div></div>
@@ -67,12 +73,13 @@
 				<div class="info">
 					<div class="up">
 						<a>$100/人</a>
+						<div class="star"></div>
 					</div>
 					<div class="middle">
 						<a>道地台味米苔目</a>
 					</div>
 					<div class="bottom">
-						<a class="comment">comment</a>
+						<a class="comment">5 comments</a>
 						<div class="moreInfo">
 							<div></div>
 							<div></div>
@@ -86,12 +93,13 @@
 				<div class="info">
 					<div class="up">
 						<a>$100/人</a>
+						<div class="star"></div>
 					</div>
 					<div class="middle">
 						<a>五穀養生黑高糖</a>
 					</div>
 					<div class="bottom">
-						<a class="comment">comment</a>
+						<a class="comment">5 comments</a>
 						<div class="moreInfo">
 							<div></div>
 							<div></div>
@@ -105,12 +113,13 @@
 				<div class="info">
 					<div class="up">
 						<a>$100/人</a>
+						<div class="star"></div>
 					</div>
 					<div class="middle">
 						<a>櫻桃蘋果蛋塔</a>
 					</div>
 					<div class="bottom">
-						<a class="comment">comment</a>
+						<a class="comment">11 comments</a>
 						<div class="moreInfo">
 							<div></div>
 							<div></div>
@@ -124,12 +133,13 @@
 				<div class="info">
 					<div class="up">
 						<a>$100/人</a>
+						<div class="star"></div>
 					</div>
 					<div class="middle">
 						<a>特級麻婆豆腐</a>
 					</div>
 					<div class="bottom">
-						<a class="comment">comment</a>
+						<a class="comment">10 comments</a>
 						<div class="moreInfo">
 							<div></div>
 							<div></div>
@@ -143,12 +153,13 @@
 				<div class="info">
 					<div class="up">
 						<a>$100/人</a>
+						<div class="star"></div>
 					</div>
 					<div class="middle">
 						<a>五香牛肉麵</a>
 					</div>
 					<div class="bottom">
-						<a class="comment">comment</a>
+						<a class="comment">7 comments</a>
 						<div class="moreInfo">
 							<div></div>
 							<div></div>
@@ -162,12 +173,13 @@
 				<div class="info">
 					<div class="up">
 						<a>$100/人</a>
+						<div class="star"></div>
 					</div>
 					<div class="middle">
 						<a>炭烤薰香鴨肉</a>
 					</div>
 					<div class="bottom">
-						<a class="comment">comment</a>
+						<a class="comment">16 comments</a>
 						<div class="moreInfo">
 							<div></div>
 							<div></div>
@@ -177,6 +189,18 @@
 				</div>
 			</div>
 		</div>
+		<img class="previous" src="images/previous.png" alt="">
+		<img class="next" src="images/next.png" alt="">
 	</div>
+	<script>
+		$(function () {
+	    	$(".star").rateYo({
+		    	starWidth: "18px",
+		    	ratedFill: "#FF9826"
+			})
+		})
+
+ 
+	</script>
 </body>
 </html>

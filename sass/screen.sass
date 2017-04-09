@@ -39,7 +39,6 @@ header
 		margin-left: -164px
 		top: 40px
 		left: 50%
-		border: $border-type
 		div
 			position: relative
 			height: 38px
@@ -90,7 +89,6 @@ div.mainPage
 				width: 100%
 				height: 266px - 190px
 				padding-left: 10px
-				padding-right: 10px
 				>div
 					position: relative
 					float: left
@@ -99,8 +97,14 @@ div.mainPage
 				.up
 					height: 30px
 					a
+						position: relative
+						float: left
 						line-height: 25px
 						font-weight: bold
+					.star
+						position: relative
+						float: right
+						margin-right: 10px
 				.middle
 					height: 27px
 					a
@@ -109,6 +113,7 @@ div.mainPage
 					height: 19px
 					a
 						color: #BAB7B5
+						font-size: 12px
 					.moreInfo
 						position: absolute
 						right: 0px
@@ -122,6 +127,16 @@ div.mainPage
 							height: 8px
 							border-radius: 50%
 							background-color: #8C8B8B
+	img.previous,img.next
+		position: absolute
+		width: 30px
+		height: 50px
+		top: 380px
+		cursor: pointer
+	img.previous
+		left: 4%
+	img.next
+		right: 4%
 
 
 
