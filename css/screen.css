@@ -1,215 +1,329 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
 html {
-  line-height: 1;
+    line-height: 1;
 }
 
-ol, ul {
-  list-style: none;
+ol,
+ul {
+    list-style: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
 }
 
-q, blockquote {
-  quotes: none;
+q,
+blockquote {
+    quotes: none;
 }
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none;
 }
 
 a img {
-  border: none;
+    border: none;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
 }
 
 header {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 80px;
-  background-color: black;
-  color: white;
-  display: inline-block;
-  z-index: 99;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    z-index: 99;
 }
+
 header .orange {
-  position: relative;
-  width: 30px;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #FF9826;
-  float: left;
+    position: relative;
+    width: 30px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #FF9826;
+    float: left;
 }
+
 header .logo {
-  position: relative;
-  left: 20px;
-  top: 10px;
-  float: left;
-  border: 0.5px solid #EDECEB;
+    position: relative;
+    left: 20px;
+    top: 10px;
+    float: left;
+    border: 0.5px solid #EDECEB;
 }
+
 header .logo img {
-  width: 170px;
-  height: 60px;
+    width: 170px;
+    height: 60px;
 }
+
 header nav {
-  position: absolute;
-  width: 328px;
-  height: 40px;
-  margin-left: -164px;
-  top: 40px;
-  left: 50%;
+    position: absolute;
+    width: 328px;
+    height: 40px;
+    margin-left: -164px;
+    top: 40px;
+    left: 50%;
 }
+
 header nav div {
-  position: relative;
-  height: 38px;
-  float: left;
-  width: 80px;
-  font-size: 33px;
-  font-family: Microsoft JhengHei, monospace;
-  margin-left: 2px;
-  text-align: center;
-  cursor: pointer;
+    position: relative;
+    height: 38px;
+    float: left;
+    width: 80px;
+    font-size: 33px;
+    font-family: Microsoft JhengHei, monospace;
+    margin-left: 2px;
+    text-align: center;
+    cursor: pointer;
 }
+
 header nav div a {
-  color: white;
+    color: white;
 }
+
 header nav div:hover {
-  border-bottom: 3px solid #FF9826;
+    border-bottom: 3px solid #FF9826;
 }
 
 div.mainPage {
-  position: relative;
-  width: 100%;
-  height: auto;
-  left: 0px;
-  top: 0px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    top: 0px;
 }
+
 div.mainPage .postBoard {
-  position: absolute;
-  top: 137px;
-  width: 82%;
-  left: 9%;
-  border: 0.5px solid #EDECEB;
+    position: absolute;
+    top: 137px;
+    width: 82%;
+    left: 9%;
+    border: 0.5px solid #EDECEB;
 }
+
 div.mainPage .postBoard .posts {
-  position: relative;
-  float: left;
-  width: 20%;
-  height: 266px;
-  border: 0.5px solid #EDECEB;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-bottom: 30px;
-  cursor: pointer;
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 266px;
+    border: 0.5px solid #EDECEB;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
+
 div.mainPage .postBoard .posts:hover {
-  -webkit-filter: brightness(90%);
-  filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+    filter: brightness(90%);
 }
+
 div.mainPage .postBoard .posts .foodPicture {
-  float: left;
-  width: 100%;
-  height: 190px;
+    float: left;
+    width: 100%;
+    height: 190px;
 }
+
 div.mainPage .postBoard .posts .info {
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 76px;
-  padding-left: 10px;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 76px;
+    padding-left: 10px;
 }
-div.mainPage .postBoard .posts .info > div {
-  position: relative;
-  float: left;
-  width: 100%;
-  font-family: Microsoft JhengHei, monospace;
+
+div.mainPage .postBoard .posts .info>div {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-family: Microsoft JhengHei, monospace;
 }
+
 div.mainPage .postBoard .posts .info .up {
-  height: 30px;
+    height: 30px;
 }
+
 div.mainPage .postBoard .posts .info .up a {
-  position: relative;
-  float: left;
-  line-height: 25px;
-  font-weight: bold;
+    position: relative;
+    float: left;
+    line-height: 25px;
+    font-weight: bold;
 }
+
 div.mainPage .postBoard .posts .info .up .star {
-  position: relative;
-  float: right;
-  margin-right: 10px;
+    position: relative;
+    float: right;
+    margin-right: 10px;
 }
+
 div.mainPage .postBoard .posts .info .middle {
-  height: 27px;
+    height: 27px;
 }
+
 div.mainPage .postBoard .posts .info .middle a {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 div.mainPage .postBoard .posts .info .bottom {
-  height: 19px;
+    height: 19px;
 }
+
 div.mainPage .postBoard .posts .info .bottom a {
-  color: #BAB7B5;
-  font-size: 12px;
+    color: #BAB7B5;
+    font-size: 12px;
 }
+
 div.mainPage .postBoard .posts .info .bottom .moreInfo {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  width: 60px;
-  height: auto;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 60px;
+    height: auto;
 }
+
 div.mainPage .postBoard .posts .info .bottom .moreInfo div {
-  position: relative;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #8C8B8B;
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #8C8B8B;
 }
-div.mainPage img.previous, div.mainPage img.next {
-  position: absolute;
-  width: 30px;
-  height: 50px;
-  top: 380px;
-  cursor: pointer;
-}
-div.mainPage img.previous {
-  left: 4%;
-}
+
+div.mainPage img.previous,
 div.mainPage img.next {
-  right: 4%;
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    top: 380px;
+    cursor: pointer;
+}
+
+div.mainPage img.previous {
+    left: 4%;
+}
+
+div.mainPage img.next {
+    right: 4%;
 }
