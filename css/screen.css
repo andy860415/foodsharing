@@ -206,6 +206,34 @@ header nav div:hover {
     border-bottom: 3px solid #FF9826;
 }
 
+header .search {
+    position: absolute;
+    top: 25%;
+    right: 15%;
+}
+
+header .search img {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    right: -60px;
+}
+
+header input {
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+header input:placeholder-shown {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
 div.mainPage {
     position: relative;
     width: 100%;
