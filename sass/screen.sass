@@ -1,124 +1,251 @@
 @import "compass/reset"
+@import "rwd"
+@import "clearfix"
 $font-family: Microsoft JhengHei,monospace
 $font-size-1: 20px
-$border-type: 0.5px solid #EDECEB
+$border-type: 0.5px solid red
 $bg-color: #FFFEFD
 $orange: #FF9826
+$total-columns: 12
+$column-width: 60px
+$gutter-width: 20px
+$grid-padding: 10px
+$blue: #2471A3
 
+body
+	text-align: center
 header
 	position: fixed
 	top: 0px
 	left: 0px
 	width: 100%
 	height: 80px
-	background-color: black
+	background-color: $blue
 	color: white
 	display: inline-block
 	z-index: 99
-	.orange
+	.side
 		position: relative
 		width: 30px
 		height: 100%
 		top: 0px
 		left: 0px
-		background-color: $orange
+		background-color: black
 		float: left
-	.logo
+	.container
 		position: relative
-		left: 20px
-		top: 10px
-		float: left
-		border: $border-type
-		img
-			width: 170px
-			height: 60px
-	nav
-		position: absolute
-		width: 328px
-		height: 40px
-		margin-left: -164px
-		top: 40px
-		left: 50%
-		div
-			position: relative
-			height: 38px
+		display: inline-block
+		max-width: 970px
+		width: calc(100% - 30px)
+		.logo
+			display: inline-block
 			float: left
-			width: (320px)/4
-			font-size: 33px
-			font-family: $font-family
-			margin-left: 2px
-			text-align: center
-			cursor: pointer
+			margin-top: 10px
+			width: 90px
+			height: 60px
+			img
+				float: left
+				width: 53px
+				height: 60px
+			+media_range(0px,900px)
+				margin-left: 5px
+		#profileBox
+			display: inline-block
+			float: left
+			width: 120px
+			height: 30px
+			margin-top: 80px - 30px - 15px
+			margin-left: 30px
+			>div
+				display: inline-block
+				float: left
+				width: calc(100% / 2)
+				a
+					color: white
+					font-family: $font-family
+					font-size: 22px
+					line-height: 28px
+					cursor: pointer
+					text-decoration: none
+					&:hover
+						color: #C0D9E5
+			+media_range(0px,820px)
+				display: none
+		nav
+			position: absolute
+			width: 248px
+			height: 40px
+			margin-left: -124px
+			top: 40px
+			left: 50%
+			div
+				position: relative
+				height: 38px
+				float: left
+				width: (240px)/4
+				font-size: 25px
+				font-family: $font-family
+				margin-left: 2px
+				text-align: center
+				cursor: pointer
+				a
+					color: white
+					text-decoration: none
+			div:hover
+				border-bottom: 3px solid #DDF5F7
+			+media_range(0px,820px)
+				display: none
+		form
+			position: absolute
+			display: inline-block
+			right: 0px
+			top: 30px
+			>*
+				display: inline-block
+				float: left
+			input
+				width: 150px
+				height: 30px
+				border-radius: 5px
+				font-family: $font-family
+				text-align: center
+				+media_range(0px,350px)
+					width: 100px
+			label
+				cursor: pointer	
+				img
+					width: 30px
+					height: 30px
+					padding: 0px 10px
+			+media_range(350px,820px)
+				margin-right: -95px
+				right: 40%
+			+media_range(0px,350px)
+				margin-right: -77px
+				right: 48%
+		#nav-list-btn
+			display: none
+			position: absolute
+			width: 30px
+			height: 30px
+			right: 30px
+			top: 30px
+			img
+				width: 30px
+				height: 30px
+			+media_range(0px,820px)
+				display: inherit
+			+media_range(0px,400px)
+				right: 15px
+	#rwdList
+		position: absolute
+		display: none
+		width: 200px
+		right: 0px
+		top: 80px
+		background-color: white
+		>div
+			display: inline-block
+			float: left
+			width: calc(100% - 20px)
+			margin: 5px 10px
+			border-radius: 5px
+			padding: 5px 0px
 			a
+				font-family: $font-family
+				font-size: 26px
+				text-decoration: none
 				color: white
-		div:hover
-			border-bottom: 3px solid $orange
+			&:nth-child(1)
+				background-color: #2ECC71 
+			&:nth-child(2)
+				background-color: #2471A3
+			&:nth-child(3)
+				background-color: #884EA0
+			&:nth-child(4)
+				background-color: #27AE60
+			&:nth-child(5)
+				background-color: #9A7D0A
+			&:nth-child(6)
+				background-color: #B03A2E
 div.mainPage
 	position: relative
 	width: 100%
 	height: auto
 	left: 0px
 	top: 0px
+	padding-bottom: 100px
+	background-color: #F1EFEF
 	.postBoard
-		position: absolute
-		top: 137px
-		width: 82%
-		left: (100% - 82%)/2
-		border: $border-type
+		display: inline-block
+		margin-top: 180px 
+		max-width: 950px + 20px
+		width: calc(100% - 10px)
+		padding: 0px 5px
+		$board-height: 320px
+		$img-hieght: 200px 
 		.posts
 			position: relative
+			display: inline-block
 			float: left
-			width: (100%/5)
-			height: 266px
-			border: $border-type
-			margin-left: 2%
-			margin-right: 2%
+			width: calc((100% - 20px*3)/4)
+			height: $board-height
+			background-color: white
 			margin-bottom: 30px
 			cursor: pointer
-			&:hover
-				-webkit-filter: brightness(90%)
-				filter: brightness(90%)
+			border-bottom: solid 2px $blue
+			+clearfix
 			.foodPicture
-				position:relative
-				float: left
-				width: 100%
-				height: 190px
-			.info
 				position: relative
 				float: left
 				width: 100%
-				height: 266px - 190px
-				padding-left: 10px
+				height: $img-hieght
+				background-size: 100% 100%
+				background-repeat: no-repeat
+				background-position: center center
+				transition: all 0.7s ease
+				&:hover
+					background-size: 120% 120%
+			.info
+				position: relative
+				float: left
+				width: calc(100% - 20px)
+				height: $board-height - $img-hieght
+				padding: 0px 10px
 				>div
 					position: relative
+					display: inline-block
 					float: left
 					width: 100%
 					font-family: $font-family
-				.up
-					height: 30px
+					text-align: left
+				.title
+					height: 30%
+					a
+						font-size: 25px
+						font-weight: bold
+						line-height: 35px
+				.top
+					height: 40% 
 					a
 						position: relative
 						float: left
-						line-height: 25px
+						line-height: 40px
 						font-weight: bold
 					.star
 						position: relative
 						float: right
-						margin-right: 10px
-				.middle
-					height: 27px
-					a
-						font-weight: bold
 				.bottom
-					height: 19px
+					height: 30%
+					text-align: left
 					a
 						color: #BAB7B5
 						font-size: 12px
+						line-height: 15px
 					.moreInfo
 						position: absolute
 						right: 0px
 						top: 0px
-						width: 60px
 						height: auto
 						div
 							position: relative
@@ -127,16 +254,33 @@ div.mainPage
 							height: 8px
 							border-radius: 50%
 							background-color: #8C8B8B
-	img.previous,img.next
-		position: absolute
-		width: 30px
-		height: 50px
-		top: 380px
-		cursor: pointer
-	img.previous
-		left: 4%
-	img.next
-		right: 4%
+			&:nth-child(4n+1)
+				margin-left: 0px
+			&:nth-child(4n+2),&:nth-child(4n+3),&:nth-child(4n+4)
+				margin-left: 20px
+			+media_range(700px,950px)
+				width: calc((100% - 10px*2 - 6px)/3)
+				&:nth-child(3n+1)
+					margin-left: 0px
+				&:nth-child(3n+2),&:nth-child(3n+3)
+					margin-left: 10px
+			+media_range(420px,700px)
+				width: calc((100% - 10px*1 - 4px)/2)
+				&:nth-child(2n+1)
+					margin-left: 0px
+				&:nth-child(2n+2)
+					margin-left: 10px
+			+media_range(0px,420px)
+				width: calc((100% - 2px)/1)
+				height: 350px
+				margin-bottom: 5px
+				border-bottom: none
+				&:nth-child(n)
+					margin-left: 0px
+				.foodPicture
+					height: 270px
+				.info
+					height: 350px - 270px
 
 
 
