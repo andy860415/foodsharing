@@ -19,10 +19,18 @@
 			</div>
 			<div id ="profileBox">
 				<div class="register">
+				<% if( user == undefined ){%>
 					<a>註冊</a>
+				<% }else{ %>
+					<img src="./img/01.png" alt="profile" style="width: 30px;height: 30px;border-radius: 50%">
+				<%}%>
 				</div>
 				<div class="login">
-					<a>登入</a>
+					<% if( user == undefined ){%>
+						<a href="./login">登入</a>
+					<%}else{%>
+						<a style="font-size: 17px"><%= user %></a>
+					<%}%>
 				</div>
 			</div>
 			<nav>

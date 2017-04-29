@@ -73,34 +73,72 @@ body {
 header.top {
   position: fixed;
   width: 100%;
-  background-color: white;
+  height: 50px;
+  background-color: #2471a3;
   top: 0px;
   left: 0px;
   z-index: 99;
   opacity: 1;
   color: #2471a3;
+  transition: opacity 1s;
 }
-/* line 22, ../sass/screen.sass */
+/* line 24, ../sass/screen.sass */
 header.top #side {
+  position: absolute;
   display: inline-block;
-  float: left;
+  left: 0px;
+  top: 0px;
   width: 30px;
   height: 50px;
   background-color: #2471a3;
 }
-/* line 28, ../sass/screen.sass */
-header.top .logo {
+/* line 32, ../sass/screen.sass */
+header.top .container {
+  position: relative;
   display: inline-block;
+  max-width: 1100px;
+  width: calc(100% - 20px);
+  padding: 0px 10px;
+}
+/* line 38, ../sass/screen.sass */
+header.top .container .infoBox {
+  display: inline-block;
+  float: left;
+  padding: 17.5px;
+}
+/* line 42, ../sass/screen.sass */
+header.top .container .infoBox > div {
+  display: inline-block;
+  width: 70px;
+}
+/* line 45, ../sass/screen.sass */
+header.top .container .infoBox > div a {
+  font-size: 15px;
+  font-family: Microsoft JhengHei, monospace;
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+/* line 51, ../sass/screen.sass */
+header.top .container .infoBox > div a:hover {
+  color: #c8d4e3;
+}
+/* line 53, ../sass/screen.sass */
+header.top .container .logo {
+  position: absolute;
+  display: inline-block;
+  margin-left: -21px;
+  left: 50%;
   font-family: Microsoft JhengHei, monospace;
   padding-top: 5px;
 }
-/* line 32, ../sass/screen.sass */
-header.top .logo img {
+/* line 60, ../sass/screen.sass */
+header.top .container .logo img {
   height: 40px;
-  width: 65px;
+  width: 42px;
 }
 
-/* line 35, ../sass/screen.sass */
+/* line 63, ../sass/screen.sass */
 .main {
   display: inline-block;
   width: 100%;
@@ -112,7 +150,7 @@ header.top .logo img {
   background-size: cover;
   color: white;
 }
-/* line 45, ../sass/screen.sass */
+/* line 73, ../sass/screen.sass */
 .main h1 {
   display: block;
   padding: 200px 0px;
@@ -121,21 +159,34 @@ header.top .logo img {
   text-shadow: 2px 2px 2px black;
 }
 
-/* line 51, ../sass/screen.sass */
+/* line 79, ../sass/screen.sass */
 .aboutus {
+  position: relative;
   display: inline-block;
   width: 100%;
-  padding: 60px 0px 80px 0px;
+  margin-top: 50px;
+  padding: 60px 0px 150px 0px;
   font-family: Microsoft JhengHei, monospace;
-  background-color: #2471a3;
+  background: -webkit-linear-gradient(#2471a3, #455d7a);
+  background: -o-linear-gradient(#2471a3, #455d7a);
+  background: -moz-linear-gradient(#2471a3, #455d7a);
+  background: linear-gradient(#2471a3, #1b3c59);
 }
-/* line 57, ../sass/screen.sass */
+/* line 90, ../sass/screen.sass */
+.aboutus > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+/* line 96, ../sass/screen.sass */
 .aboutus .content {
   position: relative;
   display: inline-block;
   max-width: 500px;
 }
-/* line 61, ../sass/screen.sass */
+/* line 100, ../sass/screen.sass */
 .aboutus .content h2 {
   display: block;
   left: 0px;
@@ -143,15 +194,36 @@ header.top .logo img {
   padding: 20px 0px;
   color: white;
 }
-/* line 67, ../sass/screen.sass */
+/* line 106, ../sass/screen.sass */
 .aboutus .content p {
-  font-size: 22px;
-  text-align: left;
+  font-size: 25px;
+  font-weight: 100;
   line-height: 25px;
   color: #f1efef;
+  padding: 80px 0px;
+}
+/* line 112, ../sass/screen.sass */
+.aboutus .content .container {
+  display: inline-block;
+  max-width: 400px;
+  width: calc(100% - 10px);
+  padding: 10px 5px;
+}
+/* line 117, ../sass/screen.sass */
+.aboutus .content .container .titleBox {
+  display: inline-block;
+  float: left;
+  width: 100%/2;
+}
+/* line 121, ../sass/screen.sass */
+.aboutus .content .container .titleBox .title {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-/* line 72, ../sass/screen.sass */
+/* line 128, ../sass/screen.sass */
 div.mainPage {
   position: relative;
   width: 100%;
@@ -161,22 +233,23 @@ div.mainPage {
   padding-bottom: 100px;
   background-color: #f1efef;
 }
-/* line 80, ../sass/screen.sass */
+/* line 136, ../sass/screen.sass */
 div.mainPage .container {
   display: inline-block;
   margin-top: 150px;
   max-width: 870px;
   width: 100%;
   font-family: Microsoft JhengHei, monospace;
+  font-weight: lighter;
 }
-/* line 86, ../sass/screen.sass */
+/* line 143, ../sass/screen.sass */
 div.mainPage .container > .title {
   display: inline-block;
   float: left;
   font-size: 27px;
   padding-left: 6px;
 }
-/* line 91, ../sass/screen.sass */
+/* line 148, ../sass/screen.sass */
 div.mainPage .container > .more {
   display: inline-block;
   float: right;
@@ -185,11 +258,11 @@ div.mainPage .container > .more {
   text-decoration: none;
   padding-right: 6px;
 }
-/* line 98, ../sass/screen.sass */
+/* line 155, ../sass/screen.sass */
 div.mainPage .container hr {
   width: calc(100% - 10px);
 }
-/* line 100, ../sass/screen.sass */
+/* line 157, ../sass/screen.sass */
 div.mainPage .container .postBoard {
   display: inline-block;
   margin-top: 30px;
@@ -197,7 +270,7 @@ div.mainPage .container .postBoard {
   width: calc(100% - 10px);
   padding: 0px 5px;
 }
-/* line 108, ../sass/screen.sass */
+/* line 165, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts {
   position: relative;
   display: inline-block;
@@ -219,14 +292,14 @@ div.mainPage .container .postBoard .posts:after, div.mainPage .container .postBo
 div.mainPage .container .postBoard .posts:after {
   clear: both;
 }
-/* line 119, ../sass/screen.sass */
+/* line 176, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .foodPicture {
   position: relative;
   float: left;
   width: 100%;
   height: 200px;
 }
-/* line 124, ../sass/screen.sass */
+/* line 181, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info {
   position: relative;
   float: left;
@@ -234,7 +307,7 @@ div.mainPage .container .postBoard .posts .info {
   height: 120px;
   padding: 0px 10px;
 }
-/* line 130, ../sass/screen.sass */
+/* line 187, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info > div {
   position: relative;
   display: inline-block;
@@ -243,51 +316,51 @@ div.mainPage .container .postBoard .posts .info > div {
   font-family: Microsoft JhengHei, monospace;
   text-align: left;
 }
-/* line 137, ../sass/screen.sass */
+/* line 194, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .title {
   height: 30%;
 }
-/* line 139, ../sass/screen.sass */
+/* line 196, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .title a {
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: normal;
   line-height: 35px;
 }
-/* line 143, ../sass/screen.sass */
+/* line 200, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .top {
   height: 40%;
 }
-/* line 145, ../sass/screen.sass */
+/* line 202, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .top a {
   position: relative;
   float: left;
   line-height: 40px;
   font-weight: bold;
 }
-/* line 150, ../sass/screen.sass */
+/* line 207, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .top .star {
   position: relative;
   float: right;
 }
-/* line 153, ../sass/screen.sass */
+/* line 210, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .bottom {
   height: 30%;
   text-align: left;
 }
-/* line 156, ../sass/screen.sass */
+/* line 213, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .bottom a {
   color: #bab7b5;
   font-size: 12px;
   line-height: 15px;
 }
-/* line 160, ../sass/screen.sass */
+/* line 217, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .bottom .moreInfo {
   position: absolute;
   right: 0px;
   top: 0px;
   height: auto;
 }
-/* line 165, ../sass/screen.sass */
+/* line 222, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .bottom .moreInfo div {
   position: relative;
   display: inline-block;
@@ -296,51 +369,51 @@ div.mainPage .container .postBoard .posts .info .bottom .moreInfo div {
   border-radius: 50%;
   background-color: #8c8b8b;
 }
-/* line 172, ../sass/screen.sass */
+/* line 229, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts:nth-child(3n+1) {
   margin-left: 0px;
 }
-/* line 174, ../sass/screen.sass */
+/* line 231, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .container .postBoard .posts:nth-child(3n+3) {
   margin-left: 30px;
 }
 @media all and (min-width: 420px) and (max-width: 700px) {
-  /* line 108, ../sass/screen.sass */
+  /* line 165, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts {
     width: calc((100% - 10px*1)/2);
   }
-  /* line 178, ../sass/screen.sass */
+  /* line 235, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts:nth-child(2n+1) {
     margin-left: 0px;
   }
-  /* line 180, ../sass/screen.sass */
+  /* line 237, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts:nth-child(2n+2) {
     margin-left: 10px;
   }
 }
 @media all and (min-width: 0px) and (max-width: 420px) {
-  /* line 108, ../sass/screen.sass */
+  /* line 165, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts {
     width: calc((100% - 2px)/1);
     height: 350px;
     margin-bottom: 5px;
     border-bottom: none;
   }
-  /* line 187, ../sass/screen.sass */
+  /* line 244, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts:nth-child(n) {
     margin-left: 0px;
   }
-  /* line 189, ../sass/screen.sass */
+  /* line 246, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts .foodPicture {
     height: 270px;
   }
-  /* line 191, ../sass/screen.sass */
+  /* line 248, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts .info {
     height: 80px;
   }
 }
 
-/* line 193, ../sass/screen.sass */
+/* line 250, ../sass/screen.sass */
 .intros {
   position: relative;
   display: inline-block;
@@ -348,18 +421,18 @@ div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .contain
   padding: 90px 0px;
   font-family: Microsoft JhengHei, monospace;
 }
-/* line 199, ../sass/screen.sass */
+/* line 256, ../sass/screen.sass */
 .intros .container {
   display: inline-block;
   max-width: 1000px;
   width: calc(100% - 12px);
   padding: 0px 6px;
 }
-/* line 204, ../sass/screen.sass */
+/* line 261, ../sass/screen.sass */
 .intros .container > * {
   float: left;
 }
-/* line 206, ../sass/screen.sass */
+/* line 263, ../sass/screen.sass */
 .intros .container > h2 {
   width: 100%;
   font-size: 32px;
@@ -367,23 +440,23 @@ div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .contain
   padding-left: 20px;
   text-align: left;
 }
-/* line 212, ../sass/screen.sass */
+/* line 269, ../sass/screen.sass */
 .intros .container hr {
   width: 100%;
 }
-/* line 214, ../sass/screen.sass */
+/* line 271, ../sass/screen.sass */
 .intros .container .members {
   display: block;
   max-width: 700px;
   width: 650p;
 }
-/* line 218, ../sass/screen.sass */
+/* line 275, ../sass/screen.sass */
 .intros .container .members > div {
   display: block;
   width: 100%;
   height: 200px;
 }
-/* line 222, ../sass/screen.sass */
+/* line 279, ../sass/screen.sass */
 .intros .container .members > div img {
   display: inline-block;
   float: left;
@@ -392,7 +465,7 @@ div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .contain
   margin: 30px;
   border-radius: 50%;
 }
-/* line 229, ../sass/screen.sass */
+/* line 286, ../sass/screen.sass */
 .intros .container .members > div .intro {
   display: inline-block;
   float: left;
@@ -403,16 +476,16 @@ div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .contain
   padding-right: 10px;
   line-height: 20px;
 }
-/* line 238, ../sass/screen.sass */
+/* line 295, ../sass/screen.sass */
 .intros .container .members > div .intro h2 {
   font-size: 26px;
 }
-/* line 240, ../sass/screen.sass */
+/* line 297, ../sass/screen.sass */
 .intros .container .members > div .intro h3 {
   padding-left: 15px;
   padding-top: 10px;
 }
-/* line 243, ../sass/screen.sass */
+/* line 300, ../sass/screen.sass */
 .intros .container .members > div .intro a {
   cursor: pointer;
 }

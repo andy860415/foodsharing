@@ -2,18 +2,14 @@ $(function(){
 	$(window).scroll(function(){
 	    let scrollVal = $(this).scrollTop()
 	    let speed = 50
-	    if( scrollVal >= 10 ) {
+	    if( scrollVal >= 20 ) {
 	        $("header.top").css({
-        		"background-color": "#2471A3",
-        		"color": "#DFF5F2"
+	        	"opacity": "0.6"
         	})
-	        
 	    }else{
 	    	$("header.top").css({
-        		"background-color": "white",
-        		"color": "#2471A3"
+	    		"opacity": "1",
         	})
-
 	    }
 	})
 });
