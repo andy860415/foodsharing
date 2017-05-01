@@ -2,21 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<title>jiabeng</title>
-	<link rel="stylesheet" href="./css/login_style.css">
+	<link rel="stylesheet" href="./css/register_style.css">
 </head>
 <body>
 	<div class="container">
 		<div class = "logo">
 			<img src="img/app_logo_grayWhite.png" alt="">
 		</div>
-		<form action="./doLogin" method="post">
+		<form action="./doRegister" method="post">
 		<input name = "account"type="text" placeholder="enter your account">
 		<input name = "password" type="password" placeholder="enter your password">
-		<button type = "submit">Login</button>
+		<input name = "confirmPassword" type="password" placeholder="enter password again">
+		<button type = "submit">submit</button>
 	</form>
-	<a href="../foodpage">跳過</a>
 	</div>
 </body>
 </html>

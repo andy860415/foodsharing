@@ -27,13 +27,22 @@ app.all('/login',(req,res) =>{
 		userPassword: ''
 	})
 })
+app.all('/register',(req,res) =>{
+	res.render('register',{
+		userName: '',
+		userPassword: ''
+	})
+})
 app.post('/doLogin',(req,res) =>{
 	user.doLogin(req,res)
+})
+app.post('/doRegister',(req,res) => {
+	user.doRegister(req,res)
 })
 app.get('/ajax',(req,res) =>{
 	res.send('hi'+req.query.name)
 })  
 
- var server = app.listen(3000, function() {  
-  console.log('Listening on port 3000');  
+ var server = app.listen(3333, function() {  
+  console.log('Listening on port 3333');  
  });   
