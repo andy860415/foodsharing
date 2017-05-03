@@ -1,0 +1,82 @@
+body{
+     color: #5D478B;
+}
+
+.logo{
+    position: absolute;
+    top:3vw;
+    left:5vw;
+ }
+
+
+#logotext{
+    position: absolute;
+      border-radius:10px;
+    margin-top: 1.5vw;
+    width: 16vw;
+    height: 1.5vw;
+    background: transparent;
+     border:1.5px #5D478B solid ;
+}
+
+#user{
+    position: absolute;
+    top:2vw;
+    left:85vw;
+}
+.pic{
+    position: absolute;
+    left: 5vw;
+    top: 20vw;
+}
+
+#text{
+    border-radius:10px;
+    width:16vw;
+    height: 1.5vw;
+    background: transparent;
+    border:1.5px #5D478B solid ;
+}
+
+#desk{
+    position: absolute;
+    width: 15%;
+    height: 100%;
+}
+
+.input{
+    position: absolute;
+    top: 8vw;
+    left: 35vw;
+    font-size: 2vw;
+    
+}
+
+#food,#price,#place,#time{
+    position: absolute;
+     border-radius:10px;
+    margin-top: 2.2vw;
+    width: 40vw;
+    height: 2vw;
+    background: transparent;
+     border:1.5px #5D478B solid ;
+}
+
+#suggest{
+    position: absolute;
+    border-radius:10px;
+    margin-top: 2.2vw;
+    width: 40vw ;
+    height: 15vw;
+    background: transparent;
+     border:1.5px #5D478B solid ;
+     text-align: left;
+}
+
+#edit{
+    position: absolute;
+    top:32vw;
+    left: 5vw;
+    font-size: 2vw;
+}
+
