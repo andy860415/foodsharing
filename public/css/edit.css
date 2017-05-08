@@ -57,12 +57,12 @@ body{
     top: 8vw;
     left: 30vw;
     font-size: 2vw;
-    
+
 }
 
 #food,#place{
     position: absolute;
-     border-radius:10px; 
+     border-radius:10px;
      width: 40vw;
     height: 2vw;
     background: transparent;
@@ -103,55 +103,84 @@ body{
     font-size: 2vw;
 }
 
- #map { 
-     position: absolute;
-     height: 30vw;
-      width:80vw; 
-      margin: 0;
+#map {
+    position: absolute;
+    height: 30vw;
+    width:80vw;
+    margin: 0;
     padding: 0;
     top: 45vw;
     left:10vw;
-    }
+}
 
 
-      #pac-input {
-        
-         margin-top: 10px;
-         margin-left: 8vw;
-        border: 1px solid transparent;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        height: 3vw;
-        width: 30vw;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        
-      }
+#pac-input {
+    margin-top: 10px;
+    margin-left: 8vw;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 3vw;
+    width: 30vw;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
 
-      #pac-input:focus {
-        border-color: #4d90fe;
-      }
+#pac-input:focus {
+    border-color: #4d90fe;
+}
 
-      .pac-container {
-        font-family: Roboto;
-      }
+.pac-container {
+    font-family: Roboto;
+}
 
-      #type-selector {
-        color: #fff;
-        background-color: #4d90fe;
-        padding: 5px 11px 0px 11px;
-      }
+#type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+}
 
-      #type-selector label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
-      #target {
-        width: 34px;
-      }
+#type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#target {
+    width: 34px;
+}
+
+.preview {
+  position: absolute;
+  top: 500px;  
+  left: -300px;
+}
+
+#preview {
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+  color: #5D478B;
+  font-size: 2vw;
+  font-weight: bold;
+}
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
