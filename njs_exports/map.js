@@ -1,8 +1,21 @@
 
 
-var fs = require('fs')
+const fs = require('fs')
+let isLogin = false
+function checkLoginStatus(req,res){
+	isLogin = false
+	let user = {}
+	 user.name = req.cookies?req.signedCookies.userid:'undefined'
+	 isLogin = req.cookies?true:false
+	/*if( req.signedCookies.userid && req.signedCookies.password ){
+		user.name = req.signedCookie.userid
+		isLogin = true
+	}*/
+	return user
+}
 const getLocation = function(req,res){
 	const postList = JSON.parse(fs.readFileSync('./articles.json'))
+	let user = checkLoginStatus(req,res)
 	res.render('map_index',{
 		locations: [
 			{
@@ -38,7 +51,9 @@ const getLocation = function(req,res){
 				lng: 22.959846
 			},
 		],
-		posts: postList["posts"]
+		posts: postList["posts"],
+		user: user.name,
+		loginStatus: isLogin,
 	})
 }
 

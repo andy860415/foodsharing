@@ -13,6 +13,45 @@ $(function(){
         	})
 	    }
 	})
+	$(window).scroll(function(){
+	    let scrollVal = $(this).scrollTop()
+	    let speed = 50
+	    if( scrollVal >= 785 ) {
+	        $("#sample1").css({
+	        	"top": "590px",
+	        	"left": "calc(20% - 75px)",
+	        	"width": "130px",
+	        	"height": "130px"
+        	})
+        	$("#sample2").css({
+	        	"top": "590px",
+	        	"left": "calc(40% + 60px)",
+	        	"width": "130px",
+	        	"height": "130px"
+        	})
+        	$("#sample3").css({
+	        	"top": "590px",
+	        	"left": "calc(40% + 200px)",
+	        	"width": "130px",
+	        	"height": "130px"
+        	})
+	    }else{
+	    	$('.item').css({
+	    		'top': '50px',
+	    		'width': 'calc((100% - 60px)/3)',
+	    		'height': '170px'
+	    	})
+	    	$("#sample1").css({
+	        	"left": "0px",
+        	})
+        	$("#sample2").css({
+	        	"left": "calc((100% - 60px)/3 + 10px)",
+        	})
+        	$("#sample3").css({
+	        	"left": "calc((100% - 60px)*2/3 + 20px)",
+        	})
+	    }
+	})
 });
 
 $(function(){

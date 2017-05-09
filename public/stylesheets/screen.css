@@ -74,7 +74,7 @@ header.top {
   position: fixed;
   width: 100%;
   height: 50px;
-  background: rgba(0,0,0,0);
+  background: transparent;
   top: 0px;
   left: 0px;
   z-index: 99;
@@ -91,7 +91,7 @@ header.top #side {
   width: 30px;
   height: 50px;
 }
-/* line 32, ../sass/screen.sass */
+/* line 31, ../sass/screen.sass */
 header.top .container {
   position: relative;
   display: inline-block;
@@ -99,18 +99,18 @@ header.top .container {
   width: calc(100% - 20px);
   padding: 0px 10px;
 }
-/* line 38, ../sass/screen.sass */
+/* line 37, ../sass/screen.sass */
 header.top .container .infoBox {
   display: inline-block;
   float: left;
   padding: 17.5px;
 }
-/* line 42, ../sass/screen.sass */
+/* line 41, ../sass/screen.sass */
 header.top .container .infoBox > div {
   display: inline-block;
   width: 70px;
 }
-/* line 45, ../sass/screen.sass */
+/* line 44, ../sass/screen.sass */
 header.top .container .infoBox > div a {
   font-size: 15px;
   font-family: Microsoft JhengHei, monospace;
@@ -118,11 +118,11 @@ header.top .container .infoBox > div a {
   text-decoration: none;
   transition: color 0.5s;
 }
-/* line 51, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
 header.top .container .infoBox > div a:hover {
   color: #c8d4e3;
 }
-/* line 53, ../sass/screen.sass */
+/* line 52, ../sass/screen.sass */
 header.top .container .logo {
   position: absolute;
   display: inline-block;
@@ -131,13 +131,13 @@ header.top .container .logo {
   font-family: Microsoft JhengHei, monospace;
   padding-top: 5px;
 }
-/* line 60, ../sass/screen.sass */
+/* line 59, ../sass/screen.sass */
 header.top .container .logo img {
   height: 40px;
   width: 42px;
 }
 
-/* line 63, ../sass/screen.sass */
+/* line 62, ../sass/screen.sass */
 .main {
   display: inline-block;
   width: 100%;
@@ -145,11 +145,11 @@ header.top .container .logo img {
   padding-bottom: 50px;
   background-color: #dff5f2;
   text-align: center;
-  background-image: url("../images/bg.jpg");
+  background-image: url("../img/bg.jpg");
   background-size: cover;
   color: white;
 }
-/* line 73, ../sass/screen.sass */
+/* line 72, ../sass/screen.sass */
 .main h1 {
   display: block;
   padding: 200px 0px;
@@ -158,18 +158,123 @@ header.top .container .logo img {
   text-shadow: 2px 2px 2px black;
 }
 
-/* line 79, ../sass/screen.sass */
+/* line 78, ../sass/screen.sass */
+.intro-flow {
+  display: inline-block;
+  padding: 50px 5px;
+  width: calc(100% - 10px);
+}
+/* line 82, ../sass/screen.sass */
+.intro-flow .container {
+  position: relative;
+  display: inline-block;
+  max-width: 800px;
+  width: 100%;
+  height: 800px;
+  margin: 50px 0px;
+}
+/* line 89, ../sass/screen.sass */
+.intro-flow .container h2 {
+  font-family: Microsoft JhengHei, monospace;
+  font-size: 27px;
+}
+/* line 92, ../sass/screen.sass */
+.intro-flow .container .item {
+  position: absolute;
+  top: 50px;
+  display: inline-block;
+  width: calc((100% - 60px)/3);
+  height: 170px;
+  margin: 0px 10px;
+  transition: all 1.2s;
+}
+/* line 100, ../sass/screen.sass */
+.intro-flow .container .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+/* line 104, ../sass/screen.sass */
+.intro-flow .container #sample1 {
+  left: 0px;
+}
+/* line 106, ../sass/screen.sass */
+.intro-flow .container #sample1:hover {
+  top: 570px;
+  left: calc(20% - 75px);
+  width: 130px;
+  height: 130px;
+}
+/* line 111, ../sass/screen.sass */
+.intro-flow .container #sample2 {
+  left: calc((100% - 60px)/3 + 10px);
+}
+/* line 113, ../sass/screen.sass */
+.intro-flow .container #sample2:hover {
+  top: 570px;
+  left: calc(40% + 60px);
+  width: 130px;
+  height: 130px;
+}
+/* line 118, ../sass/screen.sass */
+.intro-flow .container #sample3 {
+  left: calc((100% - 60px)*2/3 + 20px);
+}
+/* line 120, ../sass/screen.sass */
+.intro-flow .container #sample3:hover {
+  top: 570px;
+  left: calc(40% + 200px);
+  width: 130px;
+  height: 130px;
+}
+/* line 125, ../sass/screen.sass */
+.intro-flow .container .item-list {
+  display: inline-block;
+  width: 100%;
+  height: 450px;
+}
+/* line 129, ../sass/screen.sass */
+.intro-flow .container .device-list {
+  display: inline-block;
+  width: 100%;
+  padding: 50px 0px;
+}
+/* line 133, ../sass/screen.sass */
+.intro-flow .container .device-list .device {
+  display: inline-block;
+  float: left;
+  height: 200px;
+  padding: 0px 10px;
+}
+/* line 138, ../sass/screen.sass */
+.intro-flow .container .device-list #phone {
+  width: calc(40% - 20px);
+}
+/* line 140, ../sass/screen.sass */
+.intro-flow .container .device-list #phone > img {
+  max-width: 150px;
+  height: 270px;
+}
+/* line 143, ../sass/screen.sass */
+.intro-flow .container .device-list #laptop {
+  width: calc(40% - 20px);
+}
+/* line 145, ../sass/screen.sass */
+.intro-flow .container .device-list #laptop > img {
+  max-width: 500px;
+  height: 270px;
+}
+
+/* line 148, ../sass/screen.sass */
 .aboutus {
   position: relative;
   display: inline-block;
   width: 100%;
   padding: 200px 0px 200px 0px;
   font-family: Microsoft JhengHei, monospace;
-  background-image: url("../images/index_bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../img/index_bg.png");
 }
-/* line 90, ../sass/screen.sass */
+/* line 155, ../sass/screen.sass */
 .aboutus > img {
   position: absolute;
   top: 0px;
@@ -177,13 +282,13 @@ header.top .container .logo img {
   width: 100%;
   height: 100%;
 }
-/* line 96, ../sass/screen.sass */
+/* line 161, ../sass/screen.sass */
 .aboutus .content {
   position: relative;
   display: inline-block;
   max-width: 500px;
 }
-/* line 100, ../sass/screen.sass */
+/* line 165, ../sass/screen.sass */
 .aboutus .content h2 {
   display: block;
   left: 0px;
@@ -191,7 +296,7 @@ header.top .container .logo img {
   padding: 20px 0px;
   color: white;
 }
-/* line 106, ../sass/screen.sass */
+/* line 171, ../sass/screen.sass */
 .aboutus .content p {
   font-size: 25px;
   font-weight: 100;
@@ -199,20 +304,20 @@ header.top .container .logo img {
   color: #f1efef;
   padding: 80px 0px;
 }
-/* line 112, ../sass/screen.sass */
+/* line 177, ../sass/screen.sass */
 .aboutus .content .container {
   display: inline-block;
   max-width: 400px;
   width: calc(100% - 10px);
   padding: 10px 5px;
 }
-/* line 117, ../sass/screen.sass */
+/* line 182, ../sass/screen.sass */
 .aboutus .content .container .titleBox {
   display: inline-block;
   float: left;
   width: 100%/2;
 }
-/* line 121, ../sass/screen.sass */
+/* line 186, ../sass/screen.sass */
 .aboutus .content .container .titleBox .title {
   display: inline-block;
   width: 100px;
@@ -220,7 +325,7 @@ header.top .container .logo img {
   border-radius: 50%;
 }
 
-/* line 128, ../sass/screen.sass */
+/* line 193, ../sass/screen.sass */
 div.mainPage {
   position: relative;
   width: 100%;
@@ -230,7 +335,7 @@ div.mainPage {
   padding-bottom: 100px;
   background-color: #f1efef;
 }
-/* line 136, ../sass/screen.sass */
+/* line 201, ../sass/screen.sass */
 div.mainPage .container {
   display: inline-block;
   margin-top: 150px;
@@ -239,14 +344,14 @@ div.mainPage .container {
   font-family: Microsoft JhengHei, monospace;
   font-weight: lighter;
 }
-/* line 143, ../sass/screen.sass */
+/* line 208, ../sass/screen.sass */
 div.mainPage .container > .title {
   display: inline-block;
   float: left;
   font-size: 27px;
   padding-left: 6px;
 }
-/* line 148, ../sass/screen.sass */
+/* line 213, ../sass/screen.sass */
 div.mainPage .container > .more {
   display: inline-block;
   float: right;
@@ -255,11 +360,11 @@ div.mainPage .container > .more {
   text-decoration: none;
   padding-right: 6px;
 }
-/* line 155, ../sass/screen.sass */
+/* line 220, ../sass/screen.sass */
 div.mainPage .container hr {
   width: calc(100% - 10px);
 }
-/* line 157, ../sass/screen.sass */
+/* line 222, ../sass/screen.sass */
 div.mainPage .container .postBoard {
   display: inline-block;
   margin-top: 30px;
@@ -267,7 +372,7 @@ div.mainPage .container .postBoard {
   width: calc(100% - 10px);
   padding: 0px 5px;
 }
-/* line 165, ../sass/screen.sass */
+/* line 230, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts {
   position: relative;
   display: inline-block;
@@ -289,14 +394,14 @@ div.mainPage .container .postBoard .posts:after, div.mainPage .container .postBo
 div.mainPage .container .postBoard .posts:after {
   clear: both;
 }
-/* line 176, ../sass/screen.sass */
+/* line 241, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .foodPicture {
   position: relative;
   float: left;
   width: 100%;
   height: 200px;
 }
-/* line 181, ../sass/screen.sass */
+/* line 246, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info {
   position: relative;
   float: left;
@@ -304,7 +409,7 @@ div.mainPage .container .postBoard .posts .info {
   height: 120px;
   padding: 0px 10px;
 }
-/* line 187, ../sass/screen.sass */
+/* line 252, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info > div {
   position: relative;
   display: inline-block;
@@ -313,51 +418,51 @@ div.mainPage .container .postBoard .posts .info > div {
   font-family: Microsoft JhengHei, monospace;
   text-align: left;
 }
-/* line 194, ../sass/screen.sass */
+/* line 259, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .title {
   height: 30%;
 }
-/* line 196, ../sass/screen.sass */
+/* line 261, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .title a {
   font-size: 20px;
   font-weight: normal;
   line-height: 35px;
 }
-/* line 200, ../sass/screen.sass */
+/* line 265, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .top {
   height: 40%;
 }
-/* line 202, ../sass/screen.sass */
+/* line 267, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .top a {
   position: relative;
   float: left;
   line-height: 40px;
   font-weight: bold;
 }
-/* line 207, ../sass/screen.sass */
+/* line 272, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .top .star {
   position: relative;
   float: right;
 }
-/* line 210, ../sass/screen.sass */
+/* line 275, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .bottom {
   height: 30%;
   text-align: left;
 }
-/* line 213, ../sass/screen.sass */
+/* line 278, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .bottom a {
   color: #bab7b5;
   font-size: 12px;
   line-height: 15px;
 }
-/* line 217, ../sass/screen.sass */
+/* line 282, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .bottom .moreInfo {
   position: absolute;
   right: 0px;
   top: 0px;
   height: auto;
 }
-/* line 222, ../sass/screen.sass */
+/* line 287, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts .info .bottom .moreInfo div {
   position: relative;
   display: inline-block;
@@ -366,51 +471,51 @@ div.mainPage .container .postBoard .posts .info .bottom .moreInfo div {
   border-radius: 50%;
   background-color: #8c8b8b;
 }
-/* line 229, ../sass/screen.sass */
+/* line 294, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts:nth-child(3n+1) {
   margin-left: 0px;
 }
-/* line 231, ../sass/screen.sass */
+/* line 296, ../sass/screen.sass */
 div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .container .postBoard .posts:nth-child(3n+3) {
   margin-left: 30px;
 }
 @media all and (min-width: 420px) and (max-width: 700px) {
-  /* line 165, ../sass/screen.sass */
+  /* line 230, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts {
     width: calc((100% - 10px*1)/2);
   }
-  /* line 235, ../sass/screen.sass */
+  /* line 300, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts:nth-child(2n+1) {
     margin-left: 0px;
   }
-  /* line 237, ../sass/screen.sass */
+  /* line 302, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts:nth-child(2n+2) {
     margin-left: 10px;
   }
 }
 @media all and (min-width: 0px) and (max-width: 420px) {
-  /* line 165, ../sass/screen.sass */
+  /* line 230, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts {
     width: calc((100% - 2px)/1);
     height: 350px;
     margin-bottom: 5px;
     border-bottom: none;
   }
-  /* line 244, ../sass/screen.sass */
+  /* line 309, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts:nth-child(n) {
     margin-left: 0px;
   }
-  /* line 246, ../sass/screen.sass */
+  /* line 311, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts .foodPicture {
     height: 270px;
   }
-  /* line 248, ../sass/screen.sass */
+  /* line 313, ../sass/screen.sass */
   div.mainPage .container .postBoard .posts .info {
     height: 80px;
   }
 }
 
-/* line 250, ../sass/screen.sass */
+/* line 315, ../sass/screen.sass */
 .intros {
   position: relative;
   display: inline-block;
@@ -418,18 +523,18 @@ div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .contain
   padding: 90px 0px;
   font-family: Microsoft JhengHei, monospace;
 }
-/* line 256, ../sass/screen.sass */
+/* line 321, ../sass/screen.sass */
 .intros .container {
   display: inline-block;
   max-width: 1000px;
   width: calc(100% - 12px);
   padding: 0px 6px;
 }
-/* line 261, ../sass/screen.sass */
+/* line 326, ../sass/screen.sass */
 .intros .container > * {
   float: left;
 }
-/* line 263, ../sass/screen.sass */
+/* line 328, ../sass/screen.sass */
 .intros .container > h2 {
   width: 100%;
   font-size: 32px;
@@ -437,23 +542,23 @@ div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .contain
   padding-left: 20px;
   text-align: left;
 }
-/* line 269, ../sass/screen.sass */
+/* line 334, ../sass/screen.sass */
 .intros .container hr {
   width: 100%;
 }
-/* line 271, ../sass/screen.sass */
+/* line 336, ../sass/screen.sass */
 .intros .container .members {
   display: block;
   max-width: 700px;
   width: 650p;
 }
-/* line 275, ../sass/screen.sass */
+/* line 340, ../sass/screen.sass */
 .intros .container .members > div {
   display: block;
   width: 100%;
   height: 200px;
 }
-/* line 279, ../sass/screen.sass */
+/* line 344, ../sass/screen.sass */
 .intros .container .members > div img {
   display: inline-block;
   float: left;
@@ -462,7 +567,7 @@ div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .contain
   margin: 30px;
   border-radius: 50%;
 }
-/* line 286, ../sass/screen.sass */
+/* line 351, ../sass/screen.sass */
 .intros .container .members > div .intro {
   display: inline-block;
   float: left;
@@ -473,16 +578,16 @@ div.mainPage .container .postBoard .posts:nth-child(3n+2), div.mainPage .contain
   padding-right: 10px;
   line-height: 20px;
 }
-/* line 295, ../sass/screen.sass */
+/* line 360, ../sass/screen.sass */
 .intros .container .members > div .intro h2 {
   font-size: 26px;
 }
-/* line 297, ../sass/screen.sass */
+/* line 362, ../sass/screen.sass */
 .intros .container .members > div .intro h3 {
   padding-left: 15px;
   padding-top: 10px;
 }
-/* line 300, ../sass/screen.sass */
+/* line 365, ../sass/screen.sass */
 .intros .container .members > div .intro a {
   cursor: pointer;
 }

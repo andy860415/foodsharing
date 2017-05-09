@@ -4,17 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<title>jiabeng</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
 	<link rel="stylesheet" href="css/map_index_style.css">
 </head>
 <body>
 	<header class = "top">
 		<div class="container">
+		<% if( user == undefined ){%>
 			<div class="infoBox">
+		<% }else{ %>
+			<div class="infoBox" style="padding: 5px 0px">
+		<%}%>
 				<div class="register">
-					<a href="/register">Signup</a>
+					<% if( user == undefined ){%>
+					<a>Signup</a>
+				<% }else{ %>
+					<img src="./img/01.png" alt="profile" style="width: 35px;height: 35px;border-radius: 50%;">
+				<%}%>
 				</div>
 				<div class="login">
-					<a href="/login">Login</a>
+					<% if( user == undefined ){%>
+						<a href="./login">Login</a>
+					<%}else{%>
+						<a style="font-size: 17px"></a>
+					<%}%>
 				</div>
 			</div>
 		    <div class = "logo"><img src="img/app_logo_grayWhite.png" alt=""></div>

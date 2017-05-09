@@ -265,8 +265,25 @@ header #rwdList > div:nth-child(5) {
 header #rwdList > div:nth-child(6) {
   background-color: #b03a2e;
 }
+header #newPost {
+  position: absolute; 
+  width: 200px;
+  right: 0px;
+  top: 40px;  
+}
+header #newPost > div {
+  display: inline-block;
+  float: left;
+}
 
-div.mainPage {
+header #newPost > div a {
+  font-family: Microsoft JhengHei, monospace;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.mainPage {
   position: relative;
   width: 100%;
   height: auto;

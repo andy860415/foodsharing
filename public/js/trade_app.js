@@ -1,8 +1,8 @@
 $(()=>{
 	
 	//find the rest of amount
-	const content = ($('#amount-of-products').text()).split('')
-	const amount = parseInt(content[5])
+	const content = $('#amount-of-products > div').text()
+	const amount = parseInt(content)
 	let options = ''
 
 	//show the number of select list 
@@ -56,10 +56,27 @@ $(()=>{
 			password: $('#password').val(),
 			mail: $('#mail').val(),
 			phoneNumber: $('#phoneNumber').val(),
-			amount: $('#amount').val()
+			amount: $('#amount').val(),
+			product: $('.info>.content>.title').text(),
+			perPrice: $('#products-price > div').text(),
+			contact: $('#contact-phoneNumber > div').text()
 		}
-		$.post('trade/deal',form_content,(data,status)=>{
-			$('body').html('')
+		$.post('/deal',form_content,(data,status)=>{
+			let content = ''
+			$('.main > .container > .infoBox > .userProfile').html('')
+			$('.main > .container > .steps').remove()
+			$('.main > .container > .inputBox').remove()
+			content += '<h3 class = "title">交易清單</h3>'
+			content += '<ul>' 
+			content += '<li style = "padding: 10px 5px;"><label>預定者:</label>'+'<div>'+ data.name + '</div></li>'
+			content += '<li style = "padding: 10px 5px;"><label>預定食物:</label>'+'<div>'+ data.product + '</div></li>'
+			content += '<li style = "padding: 10px 5px;"><label>享用時間:</label>'+'<div>'+ data.time + '</div></li>'
+			content += '<li style = "padding: 10px 5px;"><label>消費數量:</label>'+'<div>'+ data.amount + '</div></li>'
+			content += '<li style = "padding: 10px 5px;"><label>總價:</label>'+'<div>'+ data.price + '</div></li>'
+			content += '<li style = "padding: 10px 5px;"><label>聯絡資訊:</label>'+'<div>'+ data.contact + '</div></li>'
+			content += '</ul>'
+			$('.main > .container > .infoBox > .info > .content').html(content)
+			$('.main > .container').append('<a href="/foodpage" style="line-height: 70px;">回首頁</a>')
 		})
 	})
 })()

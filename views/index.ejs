@@ -4,6 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<title>share your food</title>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="./css/screen.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -22,14 +29,14 @@
 				<% if( user == undefined ){%>
 					<a>註冊</a>
 				<% }else{ %>
-					<img src="./img/01.png" alt="profile" style="width: 30px;height: 30px;border-radius: 50%">
+					<img src="./img/01.png" alt="profile" style="width: 35px;height: 35px;border-radius: 50%">
 				<%}%>
 				</div>
 				<div class="login">
 					<% if( user == undefined ){%>
 						<a href="./login">登入</a>
 					<%}else{%>
-						<a style="font-size: 17px"><%= user %></a>
+						<a style="font-size: 17px"></a>
 					<%}%>
 				</div>
 			</div>

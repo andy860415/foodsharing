@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<title>jiabeng</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+	<link rel="manifest" href="../img/manifest.json">
+	<link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="../css/trading_page_style.css">
 </head>
@@ -33,11 +38,11 @@
 					<div class="content">
 						<h3 class="title"><%= content["title"]%></h3>
 						<ul>
-							<li id = "products-price"><label for="">價格:</label><%= content["price"] %>/份</li>
-							<li id = "enjoy-time"><label for="">用餐時間:</label>18:30~20:00</li>
-							<li id = "contact-phoneNumber"><label for="">聯絡電話:</label>0987878787</li>
-							<li id = "amount-of-products"><label for="">剩餘份數:</label><%= content["amount"]%></li>
-							<li id = "service"><label for="">提供服務:</label>內用/外帶</li>
+							<li id = "products-price"><label for="">價格:</label><div><%= content["price"] %>/份</div></li>
+							<li id = "enjoy-time"><label for="">用餐時間:</label><div>18:30~20:00</div></li>
+							<li id = "contact-phoneNumber"><label for="">聯絡電話:</label><div>0987878787</div></li>
+							<li id = "amount-of-products"><label for="">剩餘份數:</label><div><%= content["amount"]%></div></li>
+							<li id = "service"><label for="">提供服務:</label><div>內用/外帶</div></li>
 					</div>
 				</div>
 				<div class="map">

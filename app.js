@@ -45,7 +45,7 @@ app.all('/foodpage/:id',(req,res)=>{
 app.all('/near',(req,res)=>{
 	map.getLocation(req,res)
 })
-app.post('/trade/deal',(req,res)=>{
+app.post('/deal',(req,res)=>{
 	trade.check(req,res)
 })
 app.post('/doLogin',(req,res) =>{
