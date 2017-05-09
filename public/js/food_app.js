@@ -4,11 +4,12 @@ $(function(){
 	    let speed = 50
 	    if( scrollVal >= 20 ) {
 	        $("header.top").css({
-	        	"opacity": "0.6"
+	        	"background":"rgba(1,1,1,1)"
         	})
 	    }else{
 	    	$("header.top").css({
-	    		"opacity": "1",
+	    		"background": "rgba(0,0,0,0)"
+	    		
         	})
 	    }
 	})

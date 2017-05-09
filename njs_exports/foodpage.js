@@ -1,6 +1,6 @@
 
+const fs = require('fs')
 let isLogin = false
-
 function checkLoginStatus(req,res){
 	isLogin = false
 	let user = {}
@@ -15,9 +15,11 @@ function checkLoginStatus(req,res){
 
 const index = function(req,res){
 	let user = checkLoginStatus(req,res)
+	const postList = JSON.parse(fs.readFileSync('./articles.json'))
 	res.render('index',{
 		user: user.name,
-		loginStatus: isLogin
+		loginStatus: isLogin,
+		posts: postList["posts"]
 	})
 }
 

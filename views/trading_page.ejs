@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<title>jiabeng</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="../css/trading_page_style.css">
+</head>
+<body>
+	<header class = "top">
+		<div class="container">
+			<div class="infoBox">
+				<div class="register">
+					<a href="../register">Signup</a>
+				</div>
+				<div class="login">
+					<a href="../login">Login</a>
+				</div>
+			</div>
+		    <div class = "logo"><img src="../img/app_logo_grayWhite.png" alt=""></div>
+		</div>
+	</header>
+	<div class="main">
+		<div class="container">
+			<div class="infoBox">
+				<img class = "food" src='../<%= content["img_url"]%>' alt="">
+				<div class="userProfile">
+					<img class = "user_img" src='../<%= content["profile_img"] %>' alt="">
+					<h3 class = "name"><%=content["poster"] %></h3>
+				</div>
+				<div class="info">
+					<div class="content">
+						<h3 class="title"><%= content["title"]%></h3>
+						<ul>
+							<li id = "products-price"><label for="">價格:</label><%= content["price"] %>/份</li>
+							<li id = "enjoy-time"><label for="">用餐時間:</label>18:30~20:00</li>
+							<li id = "contact-phoneNumber"><label for="">聯絡電話:</label>0987878787</li>
+							<li id = "amount-of-products"><label for="">剩餘份數:</label><%= content["amount"]%></li>
+							<li id = "service"><label for="">提供服務:</label>內用/外帶</li>
+					</div>
+				</div>
+				<div class="map">
+					<iframe src="<%= content["position_url"]%>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="steps">
+				<div class="step1">
+					step1 填寫資料
+				</div>
+				<div class="step2">
+					step2 消費結帳
+				</div>
+			</div>
+			<div class="inputBox">
+				<div class="basicInfo">
+					<div class="container">
+						<div class="content">
+							<label for="name">姓名</label><br><input type="text" id="name">
+						</div>
+						<div class="content">
+							<label for="password">密碼</label><br><input type="password" id="password">
+						</div>
+						<div class="content">
+							<label for="mail">Mail</label><br><input type="text" id="mail">
+						</div>
+						<div class="content">
+							<label for="phoneNumber">連絡電話</label><br><input type="text" id="phoneNumber">
+						</div>
+						<div class="content">
+							<label for="amount">消費數量</label>
+							<select name="amount" id="amount">
+								<option value="1">1</option>
+							</select>
+						</div>
+						<p id = "remind1"></p><br>
+						<button id = "next">下一步</button>
+					</div>
+				</div>
+				<div class="trade">
+					<div class="container">
+						<div class="creditCardBox">
+							<input type="radio" name = "selector" id ="creditCard-option" class = "radio" >
+							<label for="creditCard-option">信用卡</label><br>
+							<div class="contents">
+								<div class="content">
+									<label for="cardId">信用卡卡號</label><br><input type="text" id = "cardId">
+								</div>
+								<div class="content">
+									<label for="3idNubmers">驗證碼(三碼)</label><br><input type="text" id = "3idNumbers">
+								</div>
+								<div class="content">
+									<label for="">有效期限</label><br><br>
+									<select name="months" id="">
+										<option value="1">1月</option>
+										<option value="2">2月</option>
+										<option value="3">3月</option>
+										<option value="4">4月</option>
+										<option value="5">5月</option>
+										<option value="6">6月</option>
+										<option value="7">7月</option>
+										<option value="8">8月</option>
+										<option value="9">9月</option>
+										<option value="10">10月</option>
+										<option value="11">11月</option>
+										<option value="12">12月</option>
+									</select>
+									<select name="years" id="">
+										<option value="2017">2017</option>
+										<option value="2018">2018</option>
+										<option value="2019">2019</option>
+										<option value="2020">2020</option>
+										<option value="2021">2021</option>
+										<option value="2022">2022</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="f2fBox">
+							<input type="radio" name = "selector" id ="f2f-option" class = "radio" checked = "true">
+							<label for="f2f-option">面交</label>
+						</div>
+						<button id = "previous">上一步</button>
+						<button id = "complete">完成</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src = "../js/trade_app.js"></script>
+</body>
+</html>

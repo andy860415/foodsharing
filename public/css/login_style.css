@@ -1,6 +1,27 @@
+
 body{
 	text-align: center;
+}
+.bender-before{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/login-background.jpg');
+	background-size:  cover;
+	background-repeat: no-repeat;
+	-webkit-filter: brightness(90%); /* Safari */
+    filter: brightness(50%);
+    z-index: -99;
+}
+.bender-before .blue{
+	display: inline-block;
+	float: left;
+	width: 100%;
+	height: 100%;
 	background-color: #2471A3;
+	opacity: 0.3;
 }
 .container{
 	display: inline-block;
@@ -8,6 +29,7 @@ body{
 	width: calc(100% - 20px);
 	padding: 100px 10px;
 	text-align: center;
+	z-index: 2;
 }
 .container .logo{
 	display: block;
@@ -20,6 +42,7 @@ body{
 }
 form{
 	display: inline-block;
+	max-width: 100%;
 	width: 100%;
 	padding: 20px 0px;
 }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<title>jiabeng</title>
+	<link rel="stylesheet" href="css/map_index_style.css">
+</head>
+<body>
+	<header class = "top">
+		<div class="container">
+			<div class="infoBox">
+				<div class="register">
+					<a href="/register">Signup</a>
+				</div>
+				<div class="login">
+					<a href="/login">Login</a>
+				</div>
+			</div>
+		    <div class = "logo"><img src="img/app_logo_grayWhite.png" alt=""></div>
+		</div>
+	</header>
+	<div id="map">
+	</div>
+	<div class="postBoard">
+		<% for(let i = 0 ; i < posts.length ; i++) {%>
+			<div class="posts">
+				<a href="/foodpage/<%= posts[i]["id"] %>" target="_blank">
+					<div class="foodPicture" style="background-image: url('<%=posts[i]["img_url"]%>')"></div>
+					<!--<img class = "foodPicture" src="images/001.jpg" alt="">-->
+					<div class="info">
+						<div class="title">
+							<a><%=posts[i]["title"]%></a>
+						</div>
+						<div class="top">
+							<a>$<%= posts[i]["price"]%>/份</a>
+						</div>
+						<div class="bottom">
+							<a class="comment">0 comments</a>
+							<div class="moreInfo">
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		<% }%>
+		<!--<div class="posts">
+			<div class="foodPicture" style="background-image: url('images/001.jpg')"></div>
+			
+			<div class="info">
+				<div class="title">
+					<a>黯然消魂飯</a>
+				</div>
+				<div class="top">
+					<a>$100/人</a>
+				</div>
+				<div class="bottom">
+					<a class="comment">10 comments</a>
+					<div class="moreInfo">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="posts">
+			<div class="foodPicture" style="background-image: url('images/002.jpg')"></div>
+			<div class="info">
+				<div class="title">
+					<a>湖南味紅蟳油飯</a>
+				</div>
+				<div class="top">
+					<a>$100/人</a>
+				</div>
+				<div class="bottom">
+					<a class="comment">8 comments</a>
+					<div class="moreInfo">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="posts">
+			<div class="foodPicture" style="background-image: url('images/003.jpg')"></div>
+			<div class="info">
+				<div class="title">
+					<a>道地台味米苔目</a>
+				</div>
+				<div class="top">
+					<a>$100/人</a>
+				</div>
+				<div class="bottom">
+					<a class="comment">5 comments</a>
+					<div class="moreInfo">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="posts">
+			<div class="foodPicture" style="background-image: url('images/004.jpg')"></div>
+			<div class="info">
+				<div class="title">
+					<a>五穀養生黑高糖</a>
+				</div>
+				<div class="top">
+					<a>$100/人</a>
+				</div>
+				<div class="bottom">
+					<a class="comment">5 comments</a>
+					<div class="moreInfo">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="posts">
+			<div class="foodPicture" style="background-image: url('images/005.jpg')"></div>
+			<div class="info">
+				<div class="title">
+					<a>櫻桃蘋果蛋塔</a>
+				</div>
+				<div class="top">
+					<a>$100/人</a>
+				</div>
+				<div class="bottom">
+					<a class="comment">11 comments</a>
+					<div class="moreInfo">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="posts">
+			<div class="foodPicture" style="background-image: url('images/006.jpg')"></div>
+			<div class="info">
+				<div class="title">
+					<a>特級麻婆豆腐</a>
+				</div>
+				<div class="top">
+					<a>$100/人</a>
+				</div>
+				<div class="bottom">
+					<a class="comment">10 comments</a>
+					<div class="moreInfo">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="posts">
+			<div class="foodPicture" style="background-image: url('images/007.jpg')"></div>
+			<div class="info">
+				<div class="title">
+					<a>五香牛肉麵</a>
+				</div>
+				<div class="top">
+					<a>$100/人</a>
+				</div>
+				<div class="bottom">
+					<a class="comment">7 comments</a>
+					<div class="moreInfo">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="posts">
+			<div class="foodPicture" style="background-image: url('images/008.jpg')"></div>
+			<div class="info">
+				<div class="title">
+					<a>炭烤薰香鴨肉</a>
+				</div>
+				<div class="top">
+					<a>$100/人</a>
+				</div>
+				<div class="bottom">
+					<a class="comment">16 comments</a>
+					<div class="moreInfo">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>-->
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src = "js/map_app.js">
+		const location_lists = <%- JSON.stringify(locations) %>
+	</script>
+	<script src=" https://maps.googleapis.com/maps/api/js?key=AIzaSyDn_jlt57gO8acShpp7U2ypxtyFVKmLIBM&callback=initMap" async defer>
+    </script>
+</body>
+
+</html>

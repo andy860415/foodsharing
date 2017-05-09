@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jiabeng</title>
+	<link rel="stylesheet" href="../css/info_page_style.css">
+</head>
+<body>
+    <div id="profile">
+    	<img src="../<%= content["profile_img"]%>" alt="">
+    </div>
+	<div class="container">
+      <div class="left">
+        <div class="top">
+          <div class="icon">
+          <img src="http://i.imgur.com/XVa8hVK.png" width="120" height="100">
+          </div>
+
+          <div class="title">
+          <h1><%= content["title"] %></h1>
+          </div>
+	</div>
+
+        <BR></BR>
+
+        <div class="down">
+          <div class="food-picture">
+          <img src="../<%= content["img_url"] %>" width="400" height="300">
+          </div>
+        </div>
+     </div>
+
+     <div class="right">
+
+        <div class="descriptions">
+        	<div class="sources">
+        		<h2>食材：</h2>
+           		<h3><%=content["materials"]%></h2>
+        	</div>
+        	<div id="price">
+        		<h2 >價格：</h2>
+           		<h3>$<%= content["price"] %>元/份</h2>
+        	</div>
+        	<div id="place">
+        		<h2>地點：</h2>
+           		<h3>臺南市東區大學路1號</h2>
+        	</div>
+          	<div id="time">
+        		<h2>時間：</h2>
+           		<h3>15:00~18:00</h2>
+        	</div>
+        	<div id="introduction">
+        		<h2>介紹:</h2>
+        		<div id="content">
+        			日本料理太保守`封閉又缺乏包容力·甚至很少使用新食材；其次，烹調時必須使用軟水和好的漁獲，否則無法呈現應有的水準，因此很難推廣至國際
+        		</div>
+        	</div>
+        </div>
+        <a href="/trade/<%=content["id"]%>"><button id = "submit">我要吃</button><a>
+    </div>
+</body>
+</html>
