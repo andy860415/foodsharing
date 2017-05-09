@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Introduction</title>
+
+  <meta charset="UTF-8">
+
+  <style>
+    body {
+      background-color: #F9F2D7;
+    }
+
+    div.container {
+      display: inline-block;
+      width: calc(100% - 100px);
+      height: 1000px;
+      padding: 20px 50px;
+    }
+
+    .container div.left {
+      display: inline-block;
+      width: 450px;
+      float: left;
+    }
+
+    .container div.right {
+      display: inline-block;
+      width: 500px;
+      float: left;
+      padding: 145px 0px 0px 4px;
+    }
+
+    .container div.top {
+      display: inline-block;
+      height: 150px;
+      width: 500px;
+    }
+
+    .container div.down {
+      display: inline-block;
+    }
+
+    .container div.icon {
+      padding-top: 30px;
+      display: inline-block;
+    }
+
+    .container div.title {
+      display: inline-block;
+    }
+
+    .container div.image {
+      vertical-align: text-bottom;
+    }
+
+    .container div.word {
+      display: inline-block;
+    }
+
+    .container div.Down {
+      width: 700px;
+      height: 392px;
+      padding: 0px 96px;
+    }
+
+    .container div.text {
+      border-style: solid;
+      border-radius: 25px;
+      height: 200px;
+    }
+
+    h1 {
+      font-size: 300%;
+    }
+
+    h2 {
+      padding-left: 40px;
+      font-size: 150%;
+    }
+
+    h3 {
+      text-indent: 4em;
+      padding-left: 15px;
+      font-size: 120%;
+    }
+  </style>
+
+  <head>
+
+
+    <body>
+
+      <div class="container">
+
+        <div class="left">
+
+          <div class="top">
+
+            <div class="icon">
+              <img src="http://i.imgur.com/XVa8hVK.png" width="120" height="100">
+            </div>
+
+            <div class="title">
+              <h1>
+                <font><span style="font-family: Microsoft JhengHei,monospace">&nbsp;&nbsp;<%= logo_text %></span></font>
+              </h1>
+            </div>
+
+          </div>
+
+          <BR></BR>
+
+          <div class="down">
+
+            <div class="image">
+              <img src="http://i.imgur.com/2rGLpIN.jpg" width="400" height="300">
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="right">
+
+          <div class="word">
+
+            <h2>
+              <font><span style="font-family: Microsoft JhengHei,monospace">食材：</span></font>
+            </h2>
+
+            <h3>
+              <font><span style="font-family: Microsoft JhengHei,monospace"><%= food %></font>
+            </h3>
+
+            <h2>
+              <font><span style="font-family: Microsoft JhengHei,monospace">價錢：</span></font>
+            </h2>
+
+            <h3>
+              <font><span style="font-family: Microsoft JhengHei,monospace">$<%= price %>元/份</span></font>
+            </h3>
+
+            <h2>
+              <font><span style="font-family: Microsoft JhengHei,monospace">份數：</span></font>
+            </h2>
+
+            <h3>
+              <font><span style="font-family: Microsoft JhengHei,monospace"><%= number %>份</span></font>
+            </h3>
+
+            <h2>
+              <font><span style="font-family: Microsoft JhengHei,monospace">地點：</span></font>
+            </h2>
+
+            <h3>
+              <font><span style="font-family: Microsoft JhengHei,monospace"><%= place %></span></font>
+            </h3>
+
+            <h2>
+              <font><span style="font-family: Microsoft JhengHei,monospace">訂購時間：</span></font>
+            </h2>
+
+            <h3>
+              <font><span style="font-family: Microsoft JhengHei,monospace"><%= time %></span></font>
+            </h3>
+
+            <h2>
+              <font><span style="font-family: Microsoft JhengHei,monospace">取貨時間：</span></font>
+            </h2>
+
+            <h3>
+              <font><span style="font-family: Microsoft JhengHei,monospace"><%= gettime %></span></font>
+            </h3>
+
+            <h2>
+              <font><span style="font-family: Microsoft JhengHei,monospace">介紹：</span></font>
+            </h2>
+
+          </div>
+
+          <div class="Down">
+
+            <div class="text">
+              <h2>
+                <font><span style="font-family: Microsoft JhengHei,monospace"><%= suggest %></span></font>
+              </h2>
+            </div>
+
+          </div>
+        </div>

@@ -275,6 +275,7 @@ header #newPost > div {
   display: inline-block;
   float: left;
 }
+<<<<<<< HEAD
 
 header #newPost > div a {
   font-family: Microsoft JhengHei, monospace;
@@ -283,6 +284,16 @@ header #newPost > div a {
   color: white;
 }
 
+=======
+
+header #newPost > div a {
+  font-family: Microsoft JhengHei, monospace;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+>>>>>>> 015b8ad927ed2c3e0f069e07026e92f7f8425baa
 .mainPage {
   position: relative;
   width: 100%;
