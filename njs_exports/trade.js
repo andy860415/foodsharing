@@ -9,7 +9,6 @@ const check = function(req,res){
 	returnContent.amount = req_content["amount"]
 	returnContent.price = perPrice*req_content["amount"],
 	returnContent.contact = req_content['contact']
-	console.log(returnContent.price)
 	res.send(returnContent)
 }
 

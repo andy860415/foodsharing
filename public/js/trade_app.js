@@ -62,6 +62,7 @@ $(()=>{
 			contact: $('#contact-phoneNumber > div').text()
 		}
 		$.post('/deal',form_content,(data,status)=>{
+			alert("預定完成~~ 請確認一下資料")
 			let content = ''
 			$('.main > .container > .infoBox > .userProfile').html('')
 			$('.main > .container > .steps').remove()
