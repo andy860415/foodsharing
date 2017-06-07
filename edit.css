@@ -1,0 +1,214 @@
+body{
+     color: #5D478B;
+}
+
+.logo{
+    position: absolute;
+    top:3vw;
+    left:5vw;
+ }
+
+#logotext{
+    position: absolute;
+      border-radius:10px;
+    margin-top: 1.5vw;
+    width: 16vw;
+    height: 1.5vw;
+    background: transparent;
+     border:1.5px #5D478B solid ;
+}
+
+.user{
+    position: absolute;
+    top:15vh;
+    left: 10vw;
+}
+#name{
+    margin-left:-30px; 
+    width:25vw;
+    background: transparent;
+ 
+}
+.pic{
+    position: absolute;
+    left: 40vw;
+    top:15vw;
+    height:20vw;
+}
+
+#text{
+    border-radius:10px;
+    width:16vw;
+    height: 1.5vw;
+    background: transparent;
+    border:1.5px #5D478B solid ;
+}
+#uploadImage1{
+    width: 30vw;
+    height: 5vh;
+}
+#img1{
+    height: 100%;
+}
+
+#desk{
+    position: absolute;
+    margin-left:20vw;
+    margin-top: -0.5vw;
+    height: 4vw; 
+}
+
+.input{
+    position: absolute;
+    top: 330px;
+    left: 30vw;
+    font-size: 1.5vw;
+    
+}
+
+#Name,#food,#place,#time,#price{
+    position: absolute;
+     width: 40vw;
+    height: 2vw;
+    background: transparent;
+   
+}
+
+#number{
+    position: relative;
+    width: 40vw;
+    height: 2vw;
+    background: transparent;
+    
+}
+
+
+#edit{
+    position: absolute;
+    top:32vw;
+    left: 5vw;
+    font-size: 2vw;
+}
+
+ #map { 
+     position: absolute;
+     height: 30vw;
+      width:80vw; 
+      margin: 0;
+    padding: 0;
+    top: 45vw;
+    left:10vw;
+    }
+
+.link{
+    position: absolute;
+    top: 25vh;
+    left: 80vw;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    
+    filter: grayscale(100%);
+	
+    filter: gray;
+}
+    
+.detail{
+    position: absolute;
+    top:200px;
+    left: 5vw;
+}
+#department{
+    width: 80px; 
+    background: transparent;
+}
+
+#phone{
+      width: 100px; 
+      background: transparent;
+}
+
+#email{
+      width: 130px; 
+      background: transparent;
+}
+
+
+.share{
+    position: absolute;
+    top: 300px;
+    left: 4.5vw;
+    width:20vw;
+ }
+#uploadImage2,#uploadImage3,#uploadImage4
+,#uploadImage5,#uploadImage6,#uploadImage7{
+    width: 5.5vw;
+    height: 5,5vw;
+    opacity: 0;
+    z-index: 1;
+}
+.img{
+     position: absolute;
+    top: 330px;
+    left: 5.8vw;
+    width:20vw;
+    z-index: -1;
+}
+#img2,#img3,#img4,#img5,#img6,#img7{
+    margin: 0.5px;
+  width: 5vw;
+    height: 5vw;
+    z-index: -1;
+}
+
+.surround{
+    position: absolute;
+    top: 420px;
+    left: 4.5vw;
+    width:20vw;
+}
+
+#uploadImage{
+     width: 5.5vw;
+    height: 5,5vw;
+    opacity: 0;
+    z-index: 1;
+}
+
+.select_pic{
+     position: absolute;
+    top: 330px;
+    left: 6vw;
+    width:20vw;  
+    height: 30vh;
+    z-index: -2;
+}
+
+.IMG1{
+    width: 5vw;
+    height: 5vw;
+}
+
+.user_pic{
+    position: absolute;
+    top:15vh;
+    left: 10vw;
+}
+
+#img8{
+    z-index: 10;
+      width: 12vw;
+    height: 12vw; 
+}
+
+#uploadImage8{
+    position: absolute;
+    top:0vh;
+    width: 12vw;
+    height: 12vw; 
+       opacity: 0;
+}
+#userimg{
+    width: 12vw;
+}

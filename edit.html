@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+       <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+          <link href="edit.css" rel="stylesheet">
+      	  <meta charset="UTF-8">
+            <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+    </head>
+    <body>
+        <body bgcolor='#F5F5DC'>
+        
+        <form action="/doPreview" method="POST">
+          <!--<div class="logo">
+            <img src='img/LOGO-03.png' height="20%" width="20%" >
+            <input type="text" name='logo_text'>
+          </div>-->
+          
+          <div class='user'>
+            <img src='./IMG2.png' id='userimg'> 
+           </p>            
+             <input type="text" id='name' placeholder="Name" name=''>
+                </div>
+            
+            <div class='user_pic'>
+               <img id="img8" src="">
+                  <input accept="image/*" id="uploadImage8" type="file" name="">
+            </div>
+
+          <div class='detail'>
+            <br>系所名稱/年級:<input type="text" id='department' name=''>
+            <br>Phone:    <input type="text" id='phone' name=''>
+            <br>Email:    <input type="text" id='email' name=''>
+            </div>
+
+      <!--   <div class="pic">
+             <input type="file" name="pic_path">
+          </div>-->
+          <div  class='share'>
+          
+           用餐環境:</p>
+            <input accept="image/*" id="uploadImage2" type="file" name="">
+             <input accept="image/*" id="uploadImage3" type="file" name="">            
+             <input accept="image/*" id="uploadImage4" type="file" name="">                    
+             <input accept="image/*" id="uploadImage5" type="file" name="">           
+             <input accept="image/*" id="uploadImage6" type="file" name="">          
+             <input accept="image/*" id="uploadImage7" type="file" name="">
+             </div>
+
+              <div class='surround'>
+              分享美食:</p>
+            <input accept="image/*" id="uploadImage" type="file" name="">
+             <input accept="image/*" id="uploadImage" type="file" name="">            
+             <input accept="image/*" id="uploadImage" type="file" name="">                    
+             <input accept="image/*" id="uploadImage" type="file" name="">           
+             <input accept="image/*" id="uploadImage" type="file" name="">          
+             <input accept="image/*" id="uploadImage" type="file" name="">
+             </div>
+
+            <div class='img'>
+               <img id="img2" src="">
+               <img id="img3" src="">  
+               <img id="img4" src="">
+              <img id="img5" src="">  
+              <img id="img6" src=""> 
+               <img id="img7" src="">
+            </div>
+
+           <!--  <div class='img'>
+               <img id="img8" src="">
+               <img id="img9" src="">  
+               <img id="img10" src="">
+              <img id="img11" src="">  
+              <img id="img12" src=""> 
+               <img id="img13" src="">
+            </div>
+        --> 
+
+          <div class='select_pic'>
+            <img src='./IMG1.png' class='IMG1' id='Img2'>
+             <img src='./IMG1.png'class='IMG1' id='Img3'>
+              <img src='./IMG1.png'class='IMG1'id='Img4'>
+               <img src='./IMG1.png'class='IMG1'id='Img5'>
+                <img src='./IMG1.png'class='IMG1'id='Img6'>
+                 <img src='./IMG1.png'class='IMG1'id='Img7'>
+          </div>
+
+          <div class='pic'>
+         <!--   <img src='./desk.png' id='desk'>
+          <input type="file" name='pic_path' id="file"></div>
+          <div id='file-text'><input type="text"></div>-->
+             <input accept="image/*" id="uploadImage1" type="file" name="" ></p>
+            <img id="img1" src=""></div>
+
+          <div class='input'>  
+              <b>名稱:<input type="text" name='Name' id='Name'><br><p>
+             <!-- <b>剩餘:<input type="text" name='number' id='number'><br><p>-->
+              <b>人數<!--食材-->:<input type="text" name='food' id='food'><br><p>
+              <b>價錢:<input type="text" name='price'id='price'><br><p>
+              <b>地點:<input type="text" name='place' id='place'><br><p>
+              <b>時間:<input type="text" name='time' id='time'><!--取貨時間:<input type="text" name='gettime'>--><br><p>
+                  
+            <!--  <b>介紹:<textarea wrap="virtual" name="suggest" cols="40" rows="5"></textarea><br> -->
+              
+              <div class="preview">
+                <button id="preview" type="submit">preview</button>
+                <img src=''>
+              </div>
+          </div>
+          <div class='link'>
+            <a href='https://www.facebook.com/'><img src='./FB.png' width="18%"></a></p>
+            <a href='https://www.instagram.com/'><img src='./IG.png' width="18%"></a></p>
+            <a href='https://www.google.com.tw'><img src='./Google.png' width="18%"></a>
+          </div>
+
+        </form>  
+
+  
+  
+  
+  <script>
+    $("#uploadImage1").change(function(){
+      readImage( this,1 );
+    });
+     $("#uploadImage2").change(function(){
+      readImage( this,2 );
+      $('#Img2').fadeTo(0,0);
+    });
+     $("#uploadImage3").change(function(){
+      readImage( this,3 );
+       $('#Img3').fadeTo(0,0)
+    });
+     $("#uploadImage4").change(function(){
+      readImage( this,4 );
+       $('#Img4').fadeTo(0,0)
+    });
+     $("#uploadImage5").change(function(){
+      readImage( this,5 );
+      $('#Img5').fadeTo(0,0)
+    });
+     $("#uploadImage6").change(function(){
+      readImage( this,6 );
+        $('#Img6').fadeTo(0,0)
+    });
+     $("#uploadImage7").change(function(){
+      readImage( this,7 );
+      $('#Img7').fadeTo(0,0)
+    });
+  $("#uploadImage8").change(function(){
+      readImage( this,8 );
+       $('#userimg').fadeTo(0,0)
+    });
+
+    function readImage(input,NUM) {
+      if ( input.files && input.files[0] ) {
+        var FR= new FileReader();
+        FR.onload = function(e) {
+          //e.target.result = base64 format picture
+          if(NUM==1) 
+          $('#img1').attr( "src", e.target.result );
+           if(NUM==2) 
+          $('#img2').attr( "src", e.target.result );
+           if(NUM==3) 
+          $('#img3').attr( "src", e.target.result );
+           if(NUM==4) 
+          $('#img4').attr( "src", e.target.result );
+          if(NUM==5) 
+          $('#img5').attr( "src", e.target.result );
+          if(NUM==6) 
+          $('#img6').attr( "src", e.target.result );
+          if(NUM==7) 
+          $('#img7').attr( "src", e.target.result );      
+         if(NUM==8) 
+          $('#img8').attr( "src", e.target.result );
+        }       
+        FR.readAsDataURL( input.files[0] );
+      }
+    }
+    
+
+
+  </script>
+        </body>
+        </html>
