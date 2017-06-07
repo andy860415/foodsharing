@@ -4,32 +4,20 @@
     <head>
           <link href="css/edit.css" rel="stylesheet">
       	  <meta charset="UTF-8">
-            <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-            <style>
-        a{text-decoration:none}
-                  </style>
+          <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     </head>
     <body>
         <body bgcolor='#F5F5DC'>
         
-        <form action="/doPreview" method="POST">
+        <form action="/upload" enctype="multipart/form-data" method="POST">
           <div class="logo">
             <img src='img/LOGO-03.png' height="20%" width="20%" >
             <input type="text" name='logo_text'>
           </div>
           
-          <div id='user'><img src='img/head.png' width='80%' height="80%"></div>
+          <div><img id='user' src='img/head.png'></div>
 
-          <div class="pic">
-            <input type="file" name="pic_path">
-          </div>
-
-          <!--
-          <div class='pic'>
-            <input type="text" name='pic_path' id="pic_path"><img src='img/desk.png' id='desk'>
-          </div>
           <div><input type="file" name='file' id="file"></div>
-          -->
 
           <div class='input'>           
               <b>食材:<input type="text" name='food'><br><p>
@@ -38,6 +26,9 @@
               <b>訂購時間:<input type="text" name='time'>取貨時間:<input type="text" name='gettime'><br><p>
               <b>介紹:<textarea wrap="virtual" name="suggest" cols="40" rows="5"></textarea><br> 
               
+              <label class="choose-file" id="upload" for="id_image_large"></label>
+              <input type="file" id="id_image_large" name="image_large">
+
               <div class="preview">
                 <button id="preview" type="submit">preview</button>
                 <img src=''>
@@ -127,7 +118,7 @@
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEJ3rnTtFEubxTQiu-4cWOj9bhgG6tyi0&libraries=places&callback=initAutocomplete"
-         async defer></script>
+         async defer></script> 
 
     </body>
 </html>
