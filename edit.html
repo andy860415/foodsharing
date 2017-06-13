@@ -97,14 +97,18 @@
               <b>名稱:<input type="text" name='Name' id='Name'><br><p>
              <!-- <b>剩餘:<input type="text" name='number' id='number'><br><p>-->
               <b>人數<!--食材-->:<input type="text" name='food' id='food'><br><p>
-              <b>價錢:<input type="text" name='price'id='price'><br><p>
-              <b>地點:<input type="text" name='place' id='place'><br><p>
+               <b>價錢:<input type="text" name='price'id='price'><br><p>
+             
+              <body onload="load()" onunload="GUnload()">
+               <b>地點:<input type="text" name='place' id='place'>
+               <input name="button" type="button" value="Search" id="mapsearch" onclick="javascript:addressGps();" /><br><p>
+                          
               <b>時間:<input type="text" name='time' id='time'><!--取貨時間:<input type="text" name='gettime'>--><br><p>
                   
             <!--  <b>介紹:<textarea wrap="virtual" name="suggest" cols="40" rows="5"></textarea><br> -->
               
               <div class="preview">
-                <button id="preview" type="submit">preview</button>
+                <button id="preview" type="submit" value="Search" onclick="javascript:addressGps();">preview</button>
                 <img src=''>
               </div>
           </div>
@@ -113,6 +117,9 @@
             <a href='https://www.instagram.com/'><img src='./IG.png' width="18%"></a></p>
             <a href='https://www.google.com.tw'><img src='./Google.png' width="18%"></a>
           </div>
+
+      	<div id="my_map" style="width: 85vw; height: 40vw"></div>
+        
 
         </form>  
 
@@ -178,8 +185,48 @@
       }
     }
     
+    </script>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAG_4i2swR3KOd-nGYrlrt8RTkyS8SRe_kYPTAbwTumvAqao01PRRUcCtCzTBnNH2kRURGR8RhQQoZ3w"
+      type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
 
+var myMap;
+var myMarker
+function load() {
+	if (GBrowserIsCompatible()) {
+		myMap = new GMap2(document.getElementById("my_map"));
+		var myLatLng = new GLatLng(25.04763902653048, 121.51715755462646);
+		myMap.setCenter(myLatLng, 15);
+		myMap.addControl(new GLargeMapControl());
+		document.getElementById('inLatLng').value = myLatLng.toString();
+	myLatLng.lat();   //經緯度儲存在這裡
+	myLatLng.lng();    //		
+		
+		myMarker = new GMarker( myLatLng );
+		myMap.addOverlay( myMarker );
+	}
+}
 
-  </script>
+function addressGps() {
+	var myGeocoder = new GClientGeocoder();
+	var address = document.getElementById('place').value;
+	myGeocoder.getLatLng(address, function getRequest( point ){
+							if(!point){
+								alert('這個地址 Google 說不知道！');
+							}else{
+								//移動地圖中心點
+								myMap.panTo( point );
+								//設定標註座標
+								myMarker.setLatLng(point);
+								document.getElementById('inLatLng').value = point.toString();
+								document.getElementById('inLat').value = point.lat();
+								document.getElementById('inLng').value = point.lng();
+							}
+						});
+}
+
+//]]>
+</script>
         </body>
         </html>
